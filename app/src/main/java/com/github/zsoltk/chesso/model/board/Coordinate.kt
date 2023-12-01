@@ -19,6 +19,6 @@ data class Coordinate(
 
     companion object {
         val min = Coordinate(1f, 1f)
-        val max = Coordinate(8f, 8f)
+        val max = Coordinate(9f, 9f)
     }
 }

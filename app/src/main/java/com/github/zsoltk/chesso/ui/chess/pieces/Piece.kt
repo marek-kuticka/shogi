@@ -8,11 +8,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.key
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import com.github.zsoltk.chesso.model.piece.Piece
+import com.github.zsoltk.chesso.model.piece.Set
 
 @Composable
 fun Piece(
@@ -37,7 +39,9 @@ fun Piece(
                     color = Color.Black,
                     fontSize = with(LocalDensity.current) {
                         (squareSize / 5 * 4).toSp()
-                    }
+                    },
+                    modifier = Modifier.rotate(degrees =  if (piece.set == Set.WHITE) 0f else 180f)
+
                 )
             }
         }

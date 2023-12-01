@@ -70,29 +70,29 @@ fun Game(
                 .background(MaterialTheme.colors.background)
         ) {
             Status(gamePlayState.value.gameState)
-            Moves(
-                moves = gamePlayState.value.gameState.moves(),
-                selectedItemIndex = gamePlayState.value.gameState.currentIndex - 1
-            ) {
-                gameController.goToMove(it)
-            }
-            CapturedPieces(
-                gameState = gamePlayState.value.gameState,
-                capturedBy = if (isFlipped) Set.WHITE else Set.BLACK,
-                arrangement = Arrangement.Start,
-                scoreAlignment = Alignment.End,
-            )
+//            Moves(
+//                moves = gamePlayState.value.gameState.moves(),
+//                selectedItemIndex = gamePlayState.value.gameState.currentIndex - 1
+//            ) {
+//                gameController.goToMove(it)
+//            }
+//            CapturedPieces(
+//                gameState = gamePlayState.value.gameState,
+//                capturedBy = if (isFlipped) Set.WHITE else Set.BLACK,
+//                arrangement = Arrangement.Start,
+//                scoreAlignment = Alignment.End,
+//            )
             Board(
                 gamePlayState = gamePlayState.value,
                 gameController = gameController,
                 isFlipped = isFlipped
             )
-            CapturedPieces(
-                gameState = gamePlayState.value.gameState,
-                capturedBy = if (isFlipped) Set.BLACK else Set.WHITE,
-                arrangement = Arrangement.End,
-                scoreAlignment = Alignment.Start
-            )
+//            CapturedPieces(
+//                gameState = gamePlayState.value.gameState,
+//                capturedBy = if (isFlipped) Set.BLACK else Set.WHITE,
+//                arrangement = Arrangement.End,
+//                scoreAlignment = Alignment.Start
+//            )
             GameControls(
                 gamePlayState = gamePlayState.value,
                 onStepBack = { gameController.stepBackward() },

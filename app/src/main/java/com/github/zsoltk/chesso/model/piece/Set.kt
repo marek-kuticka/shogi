@@ -8,4 +8,10 @@ enum class Set {
             WHITE -> BLACK
             BLACK -> WHITE
         }
+
+    fun direction() =
+        when(this) {
+            WHITE -> 1
+            BLACK -> -1
+        }
 }
