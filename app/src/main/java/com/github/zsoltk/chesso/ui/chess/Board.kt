@@ -3,9 +3,11 @@ package com.github.zsoltk.chesso.ui.chess
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.github.zsoltk.chesso.model.board.Position
 import com.github.zsoltk.chesso.model.board.Position.*
 import com.github.zsoltk.chesso.model.game.controller.GameController
@@ -41,6 +43,7 @@ fun Board(
 ) {
     BoxWithConstraints(
         modifier = Modifier
+            .padding(all = 2.dp)
             .fillMaxWidth()
             .aspectRatio(1f)
     ) {
@@ -49,7 +52,7 @@ fun Board(
                 fromState = fromState,
                 toState = toState,
                 uiState = uiState,
-                squareSize = maxWidth / 8,
+                squareSize = maxWidth / 9,
                 isFlipped = isFlipped,
                 onClick = onClick
             )
