@@ -1,6 +1,7 @@
 package com.github.zsoltk.chesso.model.board
 
-import com.github.zsoltk.chesso.model.board.Position.*
+import cz.mkuticka.devel.shogi.model.board.Position.*
+import cz.mkuticka.devel.shogi.model.board.Square
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

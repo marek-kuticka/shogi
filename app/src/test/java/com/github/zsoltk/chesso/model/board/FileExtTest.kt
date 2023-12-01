@@ -1,8 +1,9 @@
 package com.github.zsoltk.chesso.model.board
 
-import com.github.zsoltk.chesso.model.board.File.h
-import com.github.zsoltk.chesso.model.board.Rank.r4
-import com.github.zsoltk.chesso.model.board.Position.h4
+import cz.mkuticka.devel.shogi.model.board.File.h
+import cz.mkuticka.devel.shogi.model.board.Rank.r4
+import cz.mkuticka.devel.shogi.model.board.Position.h4
+import cz.mkuticka.devel.shogi.model.board.get
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
